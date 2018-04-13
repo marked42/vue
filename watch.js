@@ -51,3 +51,20 @@ function createWatcher(vm, expOrFn, handler, options) {
 
   return createWatcher(vm, expOrFn, handler, options)
 }
+
+// computed
+/* 1. define watchers on vm._computedWatchers for each computed key 
+*  2. computed watcher option can be single function or object { get, set, cache }
+*    2.1 warn if computed key already exsit on vm
+*    2.2 define property of name [key] on vm iteself
+*       2.2.1 handle option type of function or object
+*       2.2.2 handle option of cache
+*       2.2.3 warning when setter is called when not in production mode, noop in production mode
+* why call watcher.depend() ?
+*/
+
+function initComputed(vm, computed) {
+  for (let key in computed) {
+
+  }
+}
